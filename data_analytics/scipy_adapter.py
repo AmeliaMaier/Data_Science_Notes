@@ -57,7 +57,7 @@ class ScipyAdapter():
         '''
         return scs.expon.pdf(x_values)
 
-    def exponential_cumulative_distribution_function():
+    def exponential_cumulative_distribution_function(x_values):
         '''
             INPUTS: x_values (the bins at the bottom of the graph)
                      mean (mu, witch hat symble, lambda)
@@ -149,4 +149,42 @@ class ScipyAdapter():
 
             Creates a generator that will create random numbers that generally follow the poisson distribution.
         '''
-        return scs.poisson.rvs(mean, size=num_ran_vars)
+        return scs.gamma.rvs(mean, size=num_ran_vars)
+
+    def normal_probability_density_function(x_values):
+        '''
+            INPUTS: x_values (the bins at the bottom of the graph)
+            RETURNS: the formula generator (can be passed into         matplotlib
+
+            Normal distributions are important in statistics and are often used in the natural and social sciences to represent real-valued random variables whose distributions are not known
+        '''
+        return scs.norm.pdf(x_values)
+
+    def normal_cumulative_distribution_function(x_values):
+        '''
+            INPUTS: x_values (the bins at the bottom of the graph)
+                     mean (mu, witch hat symble, lambda)
+            RETURNS: the formula generator (can be passed into         matplotlib
+
+            Normal distributions are important in statistics and are often used in the natural and social sciences to represent real-valued random variables whose distributions are not known
+        '''
+        return scs.norm.cdf(x_values)
+
+    def normal_stats(moments_str):
+        '''
+            INPUT: moments_str (mvsk or shorter)
+            RETURNS: tuple of requested variables (mean, var)
+
+            mean: 'm' (will be the same as the lambda that was provided)
+            variance: 'v'
+        '''
+        return scs.norm.stats(moments=moments_str)
+
+    def normal_random_variables(num_ran_vars):
+        '''
+            INPUTS: num_ran_vars (the number of random varables you want generated)
+            RETURNS: the random number generator
+
+            Creates a generator that will create random numbers that generally follow the poisson distribution.
+        '''
+        return scs.norm.rvs(size=num_ran_vars)
