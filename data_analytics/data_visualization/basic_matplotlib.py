@@ -2,9 +2,22 @@ import scipy.stats as scs
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+from IPython.display import HTML, Image
+from sklearn import datasets
+
+'''https://www.kdnuggets.com/2017/01/datascience-data-visualization-matplotlib.html'''
 
 class BasicMatplotlib():
     '''Code examples of basic graphs in matplotlib'''
+    '''command
+        plot            plot lines and/or markers
+        bar             bar plot
+        error bar       error bar plot
+        boxplot         boxplot
+        histogram       histogram
+        pie             pie charts
+        imshow          heatmaps/images
+        scatter         scatter plots'''
 
 
     def plot_histogram(data):
@@ -57,3 +70,17 @@ class twelve_graphs_histogram_with_two_lines_each():
 
     plt.legend()
     plt.tight_layout()
+    plt.shot()
+
+def iris_scatter_matrix():
+    iris = datasets.load_iris()
+    data = pd.DataFrame(data=iris.data, columns=iris.feature_names)
+    data['species'] = pd.Categorical.from_codes(iris.target, iris.target_names)
+    pd.plotting.scatter_matrix(data, figsize=(12,12))
+    plt.show()
+
+def iris_scatter_matrix_seaborn():
+    import seaborn as sns
+    sns.set(style="ticks", color_codes=True)
+    g = sns.pairplot(data, hue="species", palette="husl")
+    plt.show()

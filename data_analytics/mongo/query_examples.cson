@@ -1,0 +1,44 @@
+#Inspect the log collection in your database. How many entries are in the log collection?
+
+show collections
+db.log.count()
+  3069
+
+#Print out all of the clicks you have stored using .find(). Now using .limit(), return 10 entries. You can also use .findOne() to quickly view the first row and examine the available columns.
+
+db.log.find()
+db.log.find().limit(10)
+
+#Use .find() to find all the clicks where cy (city) is San Francisco. How many are there?
+
+db.log.find({cy:'San Francisco'});
+db.log.find({cy:'San Francisco'}).count();
+  11
+
+#Use .distinct() to find all the distinct types of web browsers (under the field a) people use to visit the sites. Count the the number of distinct web browsers (use .length on your distinct list).
+
+db.log.distinct('a').length;
+  559
+
+#Select and count the records where the users have visited a website either from a Mozilla or an Opera web browser. Search the a field using regex in mongo.
+
+db.log.find({$or: [{a: /Mozilla/},{a: /Opera/}]}).length();
+  2830
+
+#Find the type of the t (timestamp) field. You can access the type of a field in an entry by using typeof db.log.findOne({'t': {$exists: true}}).t. The field should be a number now.
+#Convert the timestamp field to the date type. You will need to multiply the number by 1000 and then make it a Date object (you can create a Date object by using new Date()). You can loop over each record using .forEach() and then .update() the record (using the _id field) with the created Date object. When you're done, confirm that the data type has been converted. Below is some template code.
+
+typeof db.log.findOne({'t': {$exists: true}}).t
+  number
+
+db.log.find({'t': {$exists: true}}).forEach(function(doc){
+    db.log.update({_id: doc._id},{$set:{t: new Date(doc.t*1000)}})})
+#above works
+#works below
+db.log.find( {'t': {$exists:true}}).forEach(function(x){
+  x.t = new Date(x.t*1000);
+  db.log.save(x);});
+
+#Sort the clicks by the timestamp and find when the first click occurred. How many clicks occurred in the first hour? To answer this, assign the earliest timestamp and timestamp at the one-hour bound to separate variables before writing the query.
+
+#Using Mongo's aggregation functionality, can you find what the most popular link clicked is? You will need to use $group, $sum, and $sort.
