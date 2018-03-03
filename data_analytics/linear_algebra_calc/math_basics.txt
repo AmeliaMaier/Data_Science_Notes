@@ -1,0 +1,4 @@
+https://galvanizeopensource.github.io/math-essentials-for-data-science/
+
+Linear Algebra:
+https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab

@@ -1,6 +1,6 @@
 import numpy as np
 
-
+'''http://www.scipy-lectures.org/intro/numpy/index.html'''
 
 ints = np.array(range(5))
 floats = np.array(np.random.rand(5,))
