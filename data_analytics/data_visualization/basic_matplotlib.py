@@ -1,4 +1,4 @@
-import scipy.stats as scs
+import scipy.stats as stats
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
@@ -54,9 +54,9 @@ class twelve_graphs_histogram_with_two_lines_each():
         rain_range = list(range(int(rainfall_df[month].values.max())+1))
         mean_rainfall = rainfall_df[month].values.mean()
         var_rainfall = rainfall_df[month].values.std()
-        poison = scs.poisson.pmf(rain_range, mean_rainfall)
+        poison = stats.poisson.pmf(rain_range, mean_rainfall)
         poisson_line =ax.plot(rain_range, poison, label='poisson pmf', color='r')
-        gamma = scs.gamma.pdf(rain_range,mean_rainfall)
+        gamma = stats.gamma.pdf(rain_range,mean_rainfall)
         gamma_line = ax.plot(rain_range, gamma, label='gama pdf', color='c')
 
     axes = axes.ravel()
@@ -70,17 +70,19 @@ class twelve_graphs_histogram_with_two_lines_each():
 
     plt.legend()
     plt.tight_layout()
-    plt.shot()
-
-def iris_scatter_matrix():
-    iris = datasets.load_iris()
-    data = pd.DataFrame(data=iris.data, columns=iris.feature_names)
-    data['species'] = pd.Categorical.from_codes(iris.target, iris.target_names)
-    pd.plotting.scatter_matrix(data, figsize=(12,12))
     plt.show()
 
-def iris_scatter_matrix_seaborn():
-    import seaborn as sns
-    sns.set(style="ticks", color_codes=True)
-    g = sns.pairplot(data, hue="species", palette="husl")
-    plt.show()
+class iris():
+
+	def iris_scatter_matrix():
+	    iris = datasets.load_iris()
+	    data = pd.DataFrame(data=iris.data, columns=iris.feature_names)
+	    data['species'] = pd.Categorical.from_codes(iris.target, iris.target_names)
+	    pd.plotting.scatter_matrix(data, figsize=(12,12))
+	    plt.show()
+
+	def iris_scatter_matrix_seaborn():
+	    import seaborn as sns
+	    sns.set(style="ticks", color_codes=True)
+        g = sns.pairplot(data, hue="species", palette="husl")
+        plt.show()
