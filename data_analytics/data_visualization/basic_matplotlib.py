@@ -5,7 +5,11 @@ import pandas as pd
 from IPython.display import HTML, Image
 from sklearn import datasets
 
-'''https://www.kdnuggets.com/2017/01/datascience-data-visualization-matplotlib.html'''
+'''
+https://www.kdnuggets.com/2017/01/datascience-data-visualization-matplotlib.html
+https://matplotlib.org/gallery/style_sheets/style_sheets_reference.html
+https://stackoverflow.com/questions/37559470/what-do-all-the-distributions-available-in-scipy-stats-look-like#37559471
+'''
 
 class BasicMatplotlib():
     '''Code examples of basic graphs in matplotlib'''

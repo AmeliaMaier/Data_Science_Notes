@@ -1,0 +1,31 @@
+Pandas
+
+    pandas is a Python library providing data structures and data analysis tools.
+    Think of it like Excel for Python, but WAY more powerful.
+    It is designed to make working with relational or labeled data both easy and intuitive.
+
+Benefits
+
+    Efficient storage and processing of data.
+    Includes many built in functions for data transformation, aggregations, and plotting.
+    Great for exploratory work.
+    Easy handling of missing data (represented as NaN)
+    Size mutability: columns can be inserted and deleted from DataFrame and higher dimensional objects
+    Automatic and explicit data alignment: objects can be explicitly aligned to a set of labels, or the user can simply ignore the labels and let Series, DataFrame, etc. automatically align the data for you in computations
+    Powerful, flexible group by functionality to perform split-apply-combine operations on data sets, for both aggregating and transforming data
+    Intelligent label-based slicing, fancy indexing, and subsetting of large data sets
+    Intuitive merging and joining data sets
+    Flexible reshaping and pivoting of data sets
+    Hierarchical labeling of axes (possible to have multiple labels per tick)
+    Robust IO tools for loading data from flat files (CSV and delimited), Excel files, databases, and saving / loading data from the ultrafast HDF5 format
+    Time series-specific functionality: date range generation and frequency conversion, moving window statistics, moving window linear regressions, date shifting and lagging, etc.
+
+Limitations
+
+    It is a general purpose data analysis tool, and there is an inherent trade-off between flexibility and specificity.
+    As such, there may be other tools that are faster for certain well-defined applications.
+    For example, once you know your data inside-and-out, and have a robust pipeline, you can use numpy directly for computations.
+
+Documentation
+
+    http://pandas.pydata.org/pandas-docs/stable/index.html

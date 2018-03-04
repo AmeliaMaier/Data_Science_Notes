@@ -1,0 +1,13 @@
+An SQL interpretor and db platform
+-most of the full functionality
+-works with psycopg2
+
+1) From terminal, start postgres:
+	sudo -i -u postgres
+
+2) For correct host on local connects:
+	sudo -u postgres psql -c "SHOW unix_socket_directories;"
+
+3) to set host to localhost and assign port:
+	alias psql="psql --host localhost"
+	psql --port 5432

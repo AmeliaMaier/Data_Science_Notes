@@ -1,3 +1,10 @@
+
+'''
+https://docs.mongodb.com/manual/tutorial/query-documents/#read-operations-queries
+https://docs.mongodb.com/manual/tutorial/query-embedded-documents/
+'''
+
+
 #Inspect the log collection in your database. How many entries are in the log collection?
 
 show collections

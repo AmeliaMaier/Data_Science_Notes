@@ -1,0 +1,1 @@
+http://nbviewer.jupyter.org/github/cs109/content/blob/master/labs/lab3/lab3full.ipynb

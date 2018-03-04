@@ -1,1 +1,10 @@
 https://galvanizeopensource.github.io/stats-shortcourse/
+http://onlinestatbook.com/2/estimation/confidence.html
+https://www.youtube.com/watch?v=I_dhPETvll8
+https://www.khanacademy.org/math/ap-statistics/sampling-distribution-ap/sampling-distribution-mean/v/central-limit-theorem
+z vs t test: https://www.youtube.com/watch?v=5ABpqVSx33I
+hypothesis testing: https://www.youtube.com/watch?v=-FtlH4svqx4
+power and sample size: https://www.youtube.com/watch?v=lHI5oEgNkrk
+http://pytolearn.csd.auth.gr/d1-hyptest/11/distros.html
+https://fivethirtyeight.com/features/science-isnt-broken/#part1
+https://en.wikipedia.org/wiki/False_discovery_rate

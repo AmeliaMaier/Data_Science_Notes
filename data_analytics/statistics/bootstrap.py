@@ -1,7 +1,8 @@
 from data_visualization/basic_matplotlib import plot_histogram as plot
 import numpy as np
 
-'''https://stats.stackexchange.com/questions/26088/explaining-to-laypeople-why-bootstrapping-works'''
+'''https://stats.stackexchange.com/questions/26088/explaining-to-laypeople-why-bootstrapping-works
+https://www.youtube.com/watch?v=_nhgHjdLE-I'''
 
 def bootstrap(sample_array, resample=10000):
     '''Implement a bootstrap function to randomly draw with replacement from a given sample. The function should take a sample as a numpy ndarray and the number of resamples as an integer (default: 10000). The function should return a list of numpy ndarray objects, each ndarray is one bootstrap sample.'''
