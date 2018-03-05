@@ -1,0 +1,2 @@
+https://www.kaggle.com/camnugent/introduction-to-machine-learning-in-r-tutorial/notebook
+https://www.kdnuggets.com/2015/05/r-vs-python-data-science.html
