@@ -1,0 +1,36 @@
+linear regression attempts to answer:
+	1) is there a relationship between two or more variables?
+	2) how strong is the relationship
+	3) are there smaller sections one or more variable can be broken into?
+		1 & 2 again
+	4) how accurately can our model predict variable values?
+	5) if there is a relationship, is it linear?
+	6) is the correlation positive or negative?
+	
+	Y ≈ β, + β,, X
+	
+	we are regressing Y on X (or Y onto X)
+	
+		For example, X may represent TV advertising and Y may represent sales .
+		Then we can regress sales onto TV by fitting the model
+		sales ≈ β, + β,, × TV.
+	
+	Together, β, and β,, are known as the model coefficients or parameters.
+		(slope and y intercept in this case)
+	
+	by far the most common approach involves minimizing the least squares criterion
+	
+	Residual sum of squares:
+		RSS = sum of [(y found - y predicted)^2]
+		choose B, and B,, to minimize RSS
+		
+		because calculus:
+			B, = y mean - B,, * x mean
+			
+	assessing accuracy:
+		Y ≈ β, + β,, X + E
+		
+		Var(μ̂) = SE(μ̂)^2 = σ^2 / n
+		
+		In general, σ^2 is not known, but can be estimated from the data. This estimate is known as the residual standard error, and is given by the formula
+			RSE = [RSS/(n − 2)]^(1/2)
