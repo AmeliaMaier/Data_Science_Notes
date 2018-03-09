@@ -1,0 +1,18 @@
+Method of Moments
+	1) Assume a distribution (Poisson, Bernouli, Binomial, Gaussian)
+	2) compute the relevant moments from the data (mean, variance ...)
+	3) use the moments to calculate the appropriate parameters of the distribution, then plot it and see if it makes sense.
+	
+Maximum Likelihood Estimation
+	1) Assume a distribution 
+	2) Define the likelihood function
+	3) choose the parameters that maximize the likelihood function
+	http://rlhick.people.wm.edu/posts/estimating-custom-mle.html
+	https://stackoverflow.com/questions/7718034/maximum-likelihood-estimate-pseudocode
+	
+Maximum a Posteriori
+	https://stats.stackexchange.com/questions/73313/how-to-compute-the-maximum-a-posteriori-probability-map-estimate-with-withou
+	
+Kernel Density Estimation
+	for modeling data that does not follow a known distribution
+	puts multiple smaller distributions together to make a new one
